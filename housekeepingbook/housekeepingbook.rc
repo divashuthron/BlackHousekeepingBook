@@ -1,0 +1,248 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어(대한민국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+Main_Dialog_View DIALOGEX 0, 0, 124, 158
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "[깜장 가계부]"
+MENU IDR_MENU2
+FONT 11, "나눔고딕", 400, 0, 0x81
+BEGIN
+    CTEXT           "총 자산",TEXT_TOTAL,53,22,21,8
+    CTEXT           "현금",TEXT_CASH,31,51,13,8
+    CTEXT           "통장",TEXT_PASSBOOK,83,51,13,8
+    GROUPBOX        "자산 현황",IDC_STATIC,7,7,110,84
+    GROUPBOX        "수입/지출 현황",IDC_STATIC,7,91,110,60
+    CTEXT           "2020.00.00",TEXT_TODAY,45,104,37,8
+    CTEXT           "오늘의 총 수입",TEXT_TOTAL_INCOME,17,118,42,8
+    CTEXT           "오늘의 총 지출",TEXT_TOTAL_EXPENSE,67,118,42,8
+    EDITTEXT        EDIT_TOTAL,15,33,99,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        EDIT_CASH,14,62,45,14,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        EDIT_PASSBOOK,66,62,45,14,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        EDIT_TOTAL_INCOME,14,130,45,14,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        EDIT_TOTAL_EXPENSE,65,130,45,14,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+END
+
+Income_Dialog_View DIALOGEX 0, 0, 124, 96
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "[깜장 가계부]"
+FONT 11, "나눔고딕", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "수입 등록",TEXT_INCOME_TITLE,7,7,110,82
+    CONTROL         "현금",RADIO_INCOME_CASH,"Button",BS_AUTORADIOBUTTON,22,24,28,10
+    CONTROL         "통장(카드)",RADIO_INCOME_PASSBOOK,"Button",BS_AUTORADIOBUTTON,57,24,45,10
+    LTEXT           "금액",TEXT_INCOME_VALUE,15,43,13,8
+    EDITTEXT        EDIT_INCOME_VALUE,34,41,62,12,ES_AUTOHSCROLL
+    LTEXT           "원",IDC_STATIC,99,43,8,8
+    PUSHBUTTON      "취소",BTN_INCOME_CALCEL,71,63,35,14
+    PUSHBUTTON      "작성",BTN_INCOME_DONE,32,63,35,14
+END
+
+Expense_Dialog_View DIALOGEX 0, 0, 128, 99
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "[깜장 가계부]"
+FONT 11, "나눔고딕", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "지출 등록",TEXT_EXPENSE_TITLE,7,7,114,85
+    CONTROL         "현금",RADIO_EXPENSE_CASH,"Button",BS_AUTORADIOBUTTON,25,26,28,10
+    CONTROL         "통장(카드)",RADIO_EXPENSE_PASSBOOK,"Button",BS_AUTORADIOBUTTON,67,26,45,10
+    LTEXT           "금액",TEXT_EXPENSE_VALUE,18,45,13,8
+    EDITTEXT        EDIT_EXPENSE_VALUE,37,43,62,12,ES_AUTOHSCROLL
+    LTEXT           "원",IDC_STATIC,102,45,8,8
+    PUSHBUTTON      "취소",BTN_EXPENSE_CALCEL,73,64,35,14
+    PUSHBUTTON      "작성",BTN_EXPENSE_DONE,34,64,35,14
+END
+
+Passbook_Dialog_View DIALOGEX 0, 0, 129, 98
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 11, "나눔고딕", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "통장 등록",TEXT_INCOME_TITLE,7,7,115,84
+    COMBOBOX        COMBO_PASSBOOK_BANK,40,23,71,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "은행명",TEXT_PASSBOOK_CHOOSE,14,24,20,8
+    LTEXT           "통장 잔고",IDC_STATIC,14,45,28,8
+    EDITTEXT        EDIT_PASSBOOK_MONEY,48,43,63,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "취소",BTN_PASSBOOK_CALCEL,77,64,35,14
+    PUSHBUTTON      "작성",BTN_PASSBOOK_DONE,38,64,35,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "C:\\Users\\RH.Banyeoul\\Downloads\\icon1.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU2 MENU
+BEGIN
+    POPUP "가계부 기입"
+    BEGIN
+        MENUITEM "지출 등록",                       ID_NEW_EXPENSE
+        MENUITEM "수입 등록",                       ID_NEW_INCOME
+    END
+    POPUP "새 통장 등록"
+    BEGIN
+        MENUITEM "새 통장",                        ID_NEW_PASSBOOK
+    END
+    POPUP "종료"
+    BEGIN
+        MENUITEM "종료하기",                        ID_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    Main_Dialog_View, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 117
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    Income_Dialog_View, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 117
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 89
+    END
+
+    Expense_Dialog_View, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 121
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+
+    Passbook_Dialog_View, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 122
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+Main_Dialog_View AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+Income_Dialog_View AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+Expense_Dialog_View AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+Passbook_Dialog_View AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+Passbook_Dialog_View DLGINIT
+BEGIN
+    COMBO_PASSBOOK_BANK, 0x403, 27, 0
+0x484e, 0xa4c3, 0xf2bf, 0x202c, 0xb9b1, 0xceb9, 0xbac0, 0xe0c7, 0x202c, 
+0xc5bd, 0xd1c7, 0xbac0, 0xe0c7, "\000" 
+    0
+END
+
+#endif    // 한국어(대한민국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
